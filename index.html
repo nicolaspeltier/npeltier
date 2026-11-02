@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nicolas Peltier – Research Page</title>
+
+  <style>
+:root {
+  --text: #1c1c1c;
+  --muted: #6b6b6b;
+  --accent: #c6a75e;      /* doré doux */
+  --bg: #fdfcf9;
+  --bg-soft: #f4f1ea;
+  --border: #e8e2d8;
+}
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+
+
+
+    header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--bg-soft);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0rem;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      A { color: var(--accent); text-decoration: none;   }
+      a:hover {
+      color: color-mix(in srgb, var(--accent) 50%, white); text-decoration: none;  }
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      margin-top: 0rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      scroll-margin-top: 15rem; 
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.3rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .publication {
+      margin-bottom: 1rem;
+    }
+
+    .publication-title {
+      font-weight: 600;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--bg-soft);
+      padding: 1.5rem 1rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+.two-columns {
+  columns: 2;
+}
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll("section");
+            sections.forEach(section => {
+                section.hidden = true;
+            });
+            document.getElementById(sectionId).hidden = false;
+        }
+    </script>
+
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <h1>Nicolas Peltier</h1>
+    <p class="subtitle">
+      <a href="http://www.cnrs.fr">CNRS</a> Researcher - Laboratoire d’Informatique de Grenoble (LIG)
+    </p>
+
+    <nav>
+      <a href="#contact" onclick="showSection('contact')">Contact</a>
+      <a href="#research" onclick="showSection('research')">Research</a>
+      <a href="#publications" onclick="showSection('publications')">Publications</a>
+      <a href="#teaching" onclick="showSection('teaching')">Teaching</a>
+      <a href="#conferences" onclick="showSection('conferences')">Conferences</a>
+      <a href="#projects"  onclick="showSection('projects')">Projects</a>
+      <a href="#links"  onclick="showSection('links')">Links</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Email: <a href="mailto:nicolas.peltier@univ-grenoble-alpes.fr">
+        nicolas.peltier@univ-grenoble-alpes.fr
+      </a><br/>
+      Office: IMAG building, Grenoble - Room 481<br>
+      150 place du Torrent<br>
+      38400 Saint Martin d'H&egrave;res, France
+    </p>
+<p> Phone: +33 (0) 4 57 42 14 90 </p>
+  </section>
+
+  <section id="research" hidden>
+    <h2>Research Interests</h2>
+I am mainly interested in <a href="http://en.wikipedia.org/wiki/Automated_reasoning">automated reasoning</a>, (computational) <a href="http://en.wikipedia.org/wiki/Logic">logic</a> 
+and related topics (<a href="http://en.wikipedia.org/wiki/Rewriting">rewriting</a>, <a href="http://en.wikipedia.org/wiki/Logic_programming">logic programming</a> etc.). 
+    <ul>
+      <li>Separation Logic </li>
+      <li>Superposition calculus</li>
+      <li>Inductive theorem proving</li>
+    <li> Formalization of proofs in <a href="https://isabelle.in.tum.de/">Isabelle</a></li> 
+    <li> Tableaux calculus</li>
+</ul>
+<p>I am the scientific leader of the <a href="http://capp.imag.fr/">CAPP</a> group.</p>
+
+  </section>
+
+  <section id="publications"  hidden>
+    <h2>Publications</h2>
+
+All recent papers can be found on <a href="https://cv.archives-ouvertes.fr/nicolas-peltier">HAL</a>. You can also consult <a href="https://dblp.org/pid/84/5281.html">DBLP</a> (please note that some entries may correspond to authors with the same name).
+
+  </section>
+
+  <section id="teaching" hidden>
+    <h2>Teaching</h2>
+	<ul>
+<li> <a href="http://ensimag.grenoble-inp.fr/">Ensimag</a>: 
+<ul> <li> <a href="http://ensimag.grenoble-inp.fr/cursus-ingenieur/th-eacute-orie-des-langages-1-3mmtl1-388065.kjsp">Th&eacute;orie des Langages I</a> (2014-2022)</li>
+<li> <a href="http://ensimag.grenoble-inp.fr/cursus-ingenieur/th-eacute-orie-des-langages-2-3mmtl2-388067.kjsp">Th&eacute;orie des Langages II</a> (2015-2022)</li>
+<li> <a href="http://ensimag.grenoble-inp.fr/cursus-ingenieur/projet-eacute-valuation-de-produits-structur-eacute-s-5mmpeps4-657141.kjsp">Projet Evaluation de Produits Structur&eacute;s</a> (2015-2017)
+<li> <a href="http://ensimag.grenoble-inp.fr/fr/formation/reseaux-de-neurones-pour-le-pricing-wmmf9m40">R&eacute;seaux de neurones pour le pricing</a> (2020-2021)
+<li> <a href="https://ensimag.grenoble-inp.fr/fr/formation/fondements-logiques-pour-l-informatique-4mmfli">Fondements Logiques pour l'Informatique</a> (2020-2025)</li>
+</ul></li>
+<li> <a href="http://www.univ-grenoble-alpes.fr/">Universit&eacute; Grenoble Alpes</a>:
+<ul>
+<li> Introduction &agrave; la logique (L2, 2017-2018)</li>
+<li> Analyse syntaxique (L3, 2018)</li>
+</ul></li>
+</ul>
+  </section>
+
+<section id = "conferences"  hidden>
+	<H2>Conferences</H2>
+	I have been involved in the programme committees of the following conferences and worshops:
+		<ul>
+		<li> <strong><a href="https://frocos.cs.uiowa.edu/">FroCos</a></strong>: <a href="https://tableaux-frocos27.lis-lab.fr/frocos/index.html">2027</a>
+	        <li> <strong><a href="https://ijcar.org/">IJCAR</a></strong>: <a href="https://www.floc26.org/ijcar">2026</a>, <a href="https://merz.gitlabpages.inria.fr/2024-ijcar/">2024</a>, <a href="https://easychair.org/cfp/IJCAR-2022">2022</a>, <a href="https://ijcar2020.org/">2020</a> (PC co-chair), <a href="http://ijcar2018.org/">2018</a>, <a href="http://www.ijcar-2016.info/">2016</a>, 2012, <a href="http://www.floc-conference.org/IJCAR-home.html">2010</a></li>
+	        <li> <strong><a href="https://www.ijcai.org/">IJCAI</a></strong>: <a href="https://2026.ijcai.org/">2026</a>, <a href="https://2025.ijcai.org/">2025</a>, <a href="https://ijcai24.org/">2024</a>, <a href="https://ijcai-23.org/">2023</a>, <a href="https://ijcai-22.org/">2022</a>, <a href="https://ijcai-21.org/">2021</a>, <a href="https://ijcai19.org/">2019</a>
+		<li> <strong><a href="https://cadeinc.org/">CADE</a></strong>: <a href="http://conference.mi.fu-berlin.de/cade-25/pc">2015</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/conf/cade/cade2003.html">2003</a></li>
+	        <li> <strong><a href="https://www.tableaux-ar.org/">TABLEAUX</a></strong>: <a href="https://tableaux-frocos27.lis-lab.fr/">2027<a>,  <a href="http://tableaux2023.tableaux-ar.org/">2023</a>, <a href="https://tableaux2019.org/">2019</a>, <a href="http://tableaux2017.cic.unb.br/">2017</a>, 2013, <a href="http://heim.ifi.uio.no/martingi/Tableaux09/">2009</a></li>
+	        <li> <strong><a href="https://www.eprover.org/EVENTS/PAAR.html">PAAR</a></strong>: <a href="http://cs.ru.nl/paar16/">2016</a>, <a href="http://www.easychair.org/smart-program/VSL2014/PAAR-cfp.html">2014</a>, <a href="http://www.eprover.org/EVENTS/PAAR-2012.html">2012</a></li>
+	        <li> <strong><a href="https://ftp-ws.csc.liv.ac.uk/">FTP</a></strong>: <a href="http://ftp11.csc.liv.ac.uk/">2011</a>, 2009 (PC co-chair), 2005, <a href="http://www.csc.liv.ac.uk/~ftp07/">FTP 2007</a></li>
+
+	        <li> <strong><a href="https://easychair.org/cfp/ASL2022">ASL 2022</a></strong>, <strong><a href="http://adsl.univ-grenoble-alpes.fr/">ADSL 2018</a></strong></li>
+
+		</ul>
+</section>
+
+<section id="projects"  hidden>
+	<H2>Projects</H2>
+<p align="justify">
+		<ul>
+    		<li> <a href="https://lig-membres.imag.fr/peltier/NARCO/">NARCO</a>. 2022-2026, funded by the <a href="http://www.agence-nationale-recherche.fr/">ANR</a> (scientific leader, partners: Verimag, LMF, Loria). See <a href="https://lejournal.cnrs.fr/nos-blogs/focus-sciences/lart-de-modeliser-des-systemes-informatiques-complexes">Focus Science CNRS</a> for a general audience article.</li>
+    		<li> <a href="https://lig-membres.imag.fr/peltier/ASAP/">ASAP</a>. 2010-2013, funded by the French 
+<a href="http://www.agence-nationale-recherche.fr/">National Research Agency</a> and by the 
+<a href="https://www.fwf.ac.at/en/">Austrian Science Fund</a>. Scientific leader of the French part. Partner: Theory and Logic Group, TU Vienna (A. Leitsch).</li>
+    		<li> ARROWS. 2005-2009, funded by the <a href="http://www.agence-nationale-recherche.fr/">ANR</a>.</li>
+		</ul>
+</section>
+<section id="links"  hidden>
+<H2>Links</H2>
+<ul>
+<li>The <a href="http://www.cnrs.fr/index.php">CNRS</a></li>
+<li>The <a href="http://www.liglab.fr/?lang=en">Laboratory of Informatics of Grenoble</a></li>
+<li>The <a href="http://capp.imag.fr/">CAPP</a> team - Calculus, Algorithms, Programs and Proofs</li>
+<li> Former students
+<ul>
+<li>V. <a href="https://scholar.google.com/citations?user=VwpcRxgAAAAJ&hl=en">Aravantinos</a> (PhD 2007-2010)</li>
+<li> H. <a href="https://sites.google.com/site/hichambensaid/home">Bensaid</a> (PhD, 2008-2011, now associate professor at INPT, Morocco)</li>
+<li> A. <a href="https://theses.fr/2014GRENM049">Kersani</a> (PhD 2010-2014) </li>
+<li> Q. Petitjean (PhD 2022-2026) </li>
+<li> Y. <a href="https://lig-membres.imag.fr/sellamiy/">Sellami</a> (PhD 2016-2020)</li>
+<li>S. <a href="https://members.loria.fr/STourret/">Tourret</a> (PhD, 2012-2016, now researcher at Inria, Nancy).</li>
+</ul></li>
+<li> Collaborations
+<ul>
+<li> M. <a href="https://lig-membres.imag.fr/mechenim/">Echenim</a> (Professor at Grenoble INP, Ensimag)</li>
+<li> R. <a href="http://nts.imag.fr/index.php/Radu_Iosif">Iosif</a> (CNRS Senior Researcher, Verimag)</li>
+<li> M. <a href="https://lmf.cnrs.fr/MihaelaSighireanu/HomePage">Sighireanu</a> (Professor, ENS Paris-Saclay)</li>
+</ul>
+</li>
+
+</ul>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    © Nicolas Peltier – CNRS 
+  </div>
+</footer>
+
+</body>
+</html>
